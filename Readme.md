@@ -29,6 +29,9 @@ Other Files under "Queries" folder are useful queries to generate the data we in
 
 ./python_src
 	These Scripts are used for cleaning data and converting the data into a user-friendly format.
+
+./MATLAB_Visualization
+	These are MATLAB script for generating figures in our final report.
 	
 
 Usage:
