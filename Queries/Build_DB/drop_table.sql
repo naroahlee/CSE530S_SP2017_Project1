@@ -1,0 +1,7 @@
+DROP TABLE Donor;
+DROP TABLE Gift;
+DROP TABLE DataAnalyst;
+DROP TABLE Campaign;
+DROP TABLE Client;
+DROP TABLE Package;
+DROP TABLE SendMail;
