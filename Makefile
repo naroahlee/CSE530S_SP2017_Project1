@@ -59,7 +59,7 @@ input_data: ${Input_Data}
 	cp ${Input_Data} ${INPUT_DATA_DIR}
 	
 
-database_all: Create_DB Create_Table Import_Data
+database_all: Create_DB Create_Table Add_Permission Import_Data
 
 database_clean: Drop_Table Drop_DB
 
@@ -73,7 +73,6 @@ GiftAmountInCSV.csv:
 	${PYTHON_SRC_DIR}/Convert_Query2csv.py ${DB_NAME} ${USER_NAME} ${QUERIES_DIR}/GetGiftAmountofCampaign.sql $@
 
 	
-
 Create_DB:
 	createdb ${DB_NAME}
 
@@ -82,6 +81,9 @@ Drop_DB:
 
 Create_Table:
 	psql -d ${DB_NAME} -f ${BUILD_DB_DIR}/create_table.sql
+
+Add_Permission:
+	psql -d ${DB_NAME} -f ${BUILD_DB_DIR}/Permission.sql
 
 Drop_Table:
 	psql -d ${DB_NAME} -f ${BUILD_DB_DIR}/drop_table.sql
