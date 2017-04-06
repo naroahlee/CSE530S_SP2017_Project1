@@ -5,3 +5,5 @@
 \copy package		FROM './Input_Data/PackageInDB.csv'			WITH CSV HEADER;
 \copy client		FROM './Input_Data/ClientInDB.csv'			WITH CSV HEADER;
 \copy dataanalyst	FROM './Input_Data/DataAnalystInDB.csv'		WITH CSV HEADER;
+\copy Donor_Tract	FROM './Input_Data/MergedGeoID.csv'			WITH CSV HEADER;
+\copy Tract_Census	FROM './Input_Data/MergedCensus_NoDup.csv'	WITH CSV HEADER;
